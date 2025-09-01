@@ -113,7 +113,7 @@ public class MainActivity extends Activity {
             public void run() {
                 try {
                     // 构建POST请求
-                    URL url = new URL("http://1.14.165.245:7020/fs1?date=1");
+                    URL url = new URL("https://ip.wcy9.com/tongzhi/fs1?date=1");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("POST");
                     connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
