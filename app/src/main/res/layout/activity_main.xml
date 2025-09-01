@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+    
+    <TextView
+        android:id="@+id/batteryLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="获取电量中..." />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="手机标识："
+        android:textSize="14sp" />
+    
+    <EditText
+        android:id="@+id/phoneIdInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="输入手机名称或标识（如：主人手机、客厅手机等）"
+        android:textSize="14sp"
+        android:maxLines="1" />
+    
+    <Button
+        android:id="@+id/saveIdButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="保存手机标识"
+        android:textSize="14sp" />
+    
+    <Button
+        android:id="@+id/reportButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="重新发送"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="启动时自动发送电量报告" />
+        
+</LinearLayout>
