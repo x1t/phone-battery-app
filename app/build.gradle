@@ -5,6 +5,15 @@ android {
     compileSdkVersion 34
     buildToolsVersion "34.0.0"
     
+    signingConfigs {
+        release {
+            storeFile file('../battery-release-key.keystore')
+            storePassword System.getenv('SIGNING_STORE_PASSWORD') ?: 'batteryapp123'
+            keyAlias System.getenv('SIGNING_KEY_ALIAS') ?: 'battery_key'
+            keyPassword System.getenv('SIGNING_KEY_PASSWORD') ?: 'batteryapp123'
+        }
+    }
+    
     defaultConfig {
         applicationId "com.batteryapp"
         minSdkVersion 16
@@ -18,6 +27,7 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     
